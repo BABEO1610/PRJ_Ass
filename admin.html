@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div id="login-screen">
+    <!-- <div id="login-screen">
         <div class="login-box">
             <h2>Chung Cư App</h2>
             <div class="form-group">
@@ -27,43 +27,23 @@
             </div>
             <button class="btn-login" onclick="handleLogin()">Đăng Nhập Ngay</button>
         </div>
-    </div>
+    </div> -->
 
-    <div id="admin-app" class="hidden">
+    <div id="admin-app">
         <nav class="admin-sidebar">
             <div class="brand">ADMIN PANEL</div>
             <ul class = "navbar_list">
-                <li class="active"><a href="thongbao.html">Thông báo</a></li>
+                <li class="active"><a href="admin.html">Thông báo</a></li>
                 <li><a href="quanLyCanHo.html">Quản lý Căn hộ</a></li>
                 <li><a href="yeuCauCuDan.html">Yêu cầu cư dân</a></li>
                 <li><a href="quanLyNhanVien.html">Quản lý nhân viên</a></li>
                 <li><a href="dichVu.html">Dịch vụ</a></li>
             </ul>
         </nav>
-        <main class="admin-content">
-            <div class="admin-header">
-                <h2>Tổng quan hệ thống</h2>
-                <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
-            </div>
-            <div style="margin-top: 20px;">
-                <h3>📋 Danh sách yêu cầu từ Cư dân</h3>
-                <table class="data-table">
-                    <thead>
-                        <tr>
-                            <th>Cư dân</th>
-                            <th>Loại</th>
-                            <th>Mô tả</th>
-                            <th>Trạng thái</th>
-                            <th>Hành động</th>
-                        </tr>
-                    </thead>
-                    <tbody id="admin-request-list"></tbody>
-                </table>
-            </div>
-        </main>
+         <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
     </div>
 
-    <div id="resident-app" class="hidden">
+    <!-- <div id="resident-app" class="hidden">
         <nav class="resident-navbar">
             <div class="brand">MyHome</div>
             <div class="menu">
@@ -92,7 +72,7 @@
                 <div id="resident-request-list"></div>
             </div>
         </main>
-    </div>
+    </div> -->
 
     <script src="js/db.js"></script> 
     <script src="js/admin.js"></script>

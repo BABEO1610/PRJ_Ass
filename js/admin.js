@@ -1,6 +1,6 @@
 function renderAdminUI() {
     const list = getRequests(); // Gọi hàm từ db.js
-    const tbody = document.getElementById('admin-request-list');
+    const tbody = document.getElementById('yeuCauCuDan#admin-request-list');
     
     if (list.length === 0) {
         tbody.innerHTML = '<tr><td colspan="5">Chưa có dữ liệu</td></tr>';

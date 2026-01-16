@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Quản Lý Chung Cư</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/resident.css">
+</head>
+<body>
+
+    <div id="admin-app">
+        <nav class="admin-sidebar">
+            <div class="brand">ADMIN PANEL</div>
+            <ul class = "navbar_list">
+                <li class="active"><a href="admin.html">Thông báo</a></li>
+                <li><a href="quanLyCanHo.html">Quản lý Căn hộ</a></li>
+                <li><a href="yeuCauCuDan.html">Yêu cầu cư dân</a></li>
+                <li><a href="quanLyNhanVien.html">Quản lý nhân viên</a></li>
+                <li><a href="dichVu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+        <main class="admin-content">
+            <div class="admin-header">
+                <h2>Tổng quan hệ thống</h2>
+                <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
+            </div>
+            <div style="margin-top: 20px;">
+                <h3>📋 Danh sách yêu cầu từ Cư dân</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Cư dân</th>
+                            <th>Loại</th>
+                            <th>Mô tả</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-request-list"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/db.js"></script> 
+    <script src="js/admin.js"></script>
+    <script src="js/resident.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
