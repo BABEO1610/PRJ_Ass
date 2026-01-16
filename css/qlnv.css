@@ -1,0 +1,164 @@
+.quanLyCanHo-main {
+    flex: 1;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #d3d3d3;
+}
+.navbar {
+    width: 100%;
+    border: 1px solid #f2eeee;
+}
+.quanLyCanHo-content-1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #0F172A;
+}
+
+.quanLyCanHo-content-1 h2 {
+    color: #38BDF8;
+    margin: 20px 35px;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.quanLyCanHo-content-1 search-box {
+    color: #38BDD7;
+    margin: 24.5px 35px;
+}
+
+.quanLyCanHo-content-2 {
+    margin: 20px 35px;
+    border: 1px solid #060505;
+    border-radius: 10px;
+}
+
+.table-header {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #050505;
+    padding: 10px 5px;
+    background-color: #f8f9fa;
+    border-radius: 10px 10px 0 0;
+
+}
+/* 1. Sửa lại khung chứa bảng để xóa màu tím và thêm viền ngoài */
+.table-info {
+    width: 100%;             /* Lấp đầy chiều ngang để mất vùng màu tím */
+    border-collapse: collapse; /* Quan trọng: Để các đường kẻ ô nhập làm một */
+    /* margin-top: 20px; */
+    background-color: white;
+    border-radius: 8px;      /* Bo góc bảng cho hiện đại */
+    overflow: hidden;        /* Để bo góc hoạt động tốt */
+    display: table;          /* PHẢI ĐỔI: Từ flex sang table để các cột đều nhau */
+}
+/* 2. Tạo đường ngăn cách dưới tiêu đề */
+.table-info thead tr {
+    border-bottom: 2px solid #eceeef; /* Đường ngăn cách giữa header và body */
+}
+
+.table-info th {
+    background-color: #f8f9fa;
+    color: #333;
+    font-weight: 600;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6; /* Đường kẻ dưới mỗi ô tiêu đề */
+}
+
+/* 3. Tạo đường ngăn cách giữa các hàng dữ liệu */
+.table-info td {
+    padding: 15px;
+    border-bottom: 1px solid #f1f1f1; /* Đường kẻ mảnh nằm ngang giữa các hàng */
+    color: #555;
+    vertical-align: middle;
+}
+
+/* 4. Hiệu ứng khi di chuột qua mỗi hàng */
+.table-info tbody tr:hover {
+    background-color: #fcfcfc; /* Highlight nhẹ khi rê chuột vào hàng */
+}
+
+/* 5. Căn chỉnh nút hành động */
+.table-info td:last-child {
+    text-align: center;
+}
+
+
+.row-header th {
+    text-align: start;
+
+}
+
+.add-rent {
+    background-color: #38BDF8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.add-rent:hover {
+    background-color: #0ea5e9;
+    transform: scale(1.05);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 10px;
+    background-color: #f9f9f9;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    border-radius: 20px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.search-box button {
+    background-color: #38BDF8;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #0b8ac5;
+    transform: scale(1.05);
+}
+
+.action-buttons button {
+    background-color: #e0e0e0;
+    border: none;
+    color: #333;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.action-buttons button:hover {
+    background-color: #c6c6c6;
+    transform: scale(1.05);
+}
