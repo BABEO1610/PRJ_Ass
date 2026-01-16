@@ -1,8 +1,207 @@
-#resident-app { display: flex; flex-direction: column; height: 100vh; }
-.resident-navbar { background: white; padding: 15px 10%; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
-.resident-content { padding: 20px 10%; flex: 1; }
-.resident-hero { background: #fff7ed; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-.request-form { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-.request-form textarea { width: 100%; margin: 10px 0; padding: 10px; }
-.btn-submit { background: #f97316; color: white; border: none; padding: 10px 20px; cursor: pointer; }
-.bill-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #eee; display: flex; justify-content: space-between; }
+/* --- BIẾN MÀU SẮC (Tông màu Cam ấm áp) --- */
+:root {
+    --primary-color: #f97316;    /* Cam chủ đạo */
+    --primary-hover: #ea580c;    /* Cam đậm khi hover */
+    --bg-soft: #fff7ed;          /* Nền kem nhạt */
+    --text-dark: #1e293b;        /* Chữ đen xám */
+    --text-light: #64748b;       /* Chữ xám nhạt */
+    --white: #ffffff;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+/* --- BỐ CỤC CHUNG --- */
+#resident-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc; /* Nền tổng thể hơi xám để làm nổi nội dung trắng */
+}
+
+/* --- NAVBAR (Thanh điều hướng) --- */
+.resident-navbar {
+    background: var(--white);
+    padding: 15px 10%; /* Căn lề rộng cho desktop */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow-sm);
+    position: sticky; /* Dính trên cùng khi cuộn */
+    top: 0;
+    z-index: 50;
+}
+
+.resident-navbar .brand {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+}
+
+.resident-navbar .menu a {
+    text-decoration: none;
+    color: var(--text-light);
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.resident-navbar .menu a:hover, .resident-navbar .menu a.active {
+    color: var(--primary-color);
+}
+
+.resident-navbar .menu .btn-logout {
+    margin-left: 20px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    border-radius: 20px; /* Bo tròn nút logout */
+    padding: 6px 16px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.resident-navbar .menu .btn-logout:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* --- HERO SECTION (Phần chào mừng) --- */
+.resident-hero {
+    background: linear-gradient(135deg, #ffedd5 0%, #fff7ed 100%); /* Gradient cam nhẹ */
+    padding: 40px 10%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fed7aa;
+}
+
+.resident-hero h2 {
+    color: #431407; /* Màu nâu đậm */
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.resident-hero p {
+    color: #9a3412;
+    font-size: 16px;
+}
+
+/* --- MAIN CONTENT --- */
+.resident-content {
+    flex: 1;
+    padding: 0 10% 40px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* --- FORM GỬI YÊU CẦU (Card Style) --- */
+.request-form {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 16px; /* Bo góc lớn hơn */
+    box-shadow: var(--shadow-md);
+    margin-bottom: 40px;
+    border: 1px solid #f1f5f9;
+}
+
+.request-form select, 
+.request-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    background-color: #f8fafc;
+}
+
+.request-form select:focus, 
+.request-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1); /* Hiệu ứng tỏa sáng khi nhập */
+    background-color: white;
+}
+
+.btn-submit {
+    background: linear-gradient(to right, #f97316, #fb923c); /* Nút gradient */
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%; /* Nút full chiều ngang trên mobile */
+    transition: transform 0.1s;
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Hiệu ứng ấn xuống */
+}
+
+/* --- DANH SÁCH LỊCH SỬ (List Style) --- */
+#resident-request-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.bill-item {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between; /* Đẩy trạng thái sang phải */
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bill-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    border-color: #fdba74; /* Viền cam nhạt khi hover */
+}
+
+.bill-item div strong {
+    font-size: 16px;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 4px;
+}
+
+.bill-item div {
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+/* --- BADGES (Giống Admin nhưng chỉnh lại chút cho mềm mại) --- */
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+}
+.status-pending { background: #fff7ed; color: #c2410c; border: 1px solid #ffedd5; }
+.status-approved { background: #f0fdf4; color: #15803d; border: 1px solid #dcfce7; }
+.status-rejected { background: #fef2f2; color: #b91c1c; border: 1px solid #fee2e2; }
+
+/* --- RESPONSIVE (Quan trọng cho Cư dân dùng điện thoại) --- */
+@media (max-width: 768px) {
+    .resident-navbar {
+        padding: 15px 20px;
+    }
+    .resident-content, .resident-hero {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .resident-navbar .menu a {
+        display: none; /* Ẩn menu chữ trên mobile cho gọn (Demo) */
+    }
+    .resident-navbar .menu .btn-logout {
+        display: block; /* Vẫn hiện nút logout */
+        margin-left: 0;
+    }
+}
