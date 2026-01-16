@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Quản Lý Chung Cư</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/resident.css">
+    <link rel="stylesheet" href="css/qlCanho.css">
+</head>
+<body>
+    <div id="admin-app">
+        <nav class="admin-sidebar">
+            <div class="brand">ADMIN PANEL</div>
+            <ul>
+                <li><a href="thongbao.html">Thông báo</a></li>
+                <li class="active"><a href="quanLyCanHo.html">Quản lý Căn hộ</a></li>
+                <li><a href="yeuCauCuDan.html">Yêu cầu cư dân</a></li>
+                <li><a href="quanLyNhanVien.html">Quản lý nhân viên</a></li>
+                <li><a href="dichVu.html">Dịch vụ</a></li>
+            </ul>
+        </nav>
+        <div class="quanLyCanHo-main">
+            <div class = "navbar">
+                <div class="quanLyCanHo-content-1">
+                    <h2>Apartment Management</h2>
+                    <search-box class="search-box">
+                        <input type="text" id="search-input" placeholder="Tìm kiếm căn hộ...">
+                        <button id="search-button">Tìm kiếm</button>
+                    </search-box>
+                </div>
+            </div>
+            <div class="quanLyCanHo-content-2">
+                <div class ="table-header">   
+                    <h3>Danh sách căn hộ</h3>
+                    <button id="add-apartment-button" class="add-rent">Thêm căn hộ mới</button>
+                </div>
+                <table class="table-info">
+                    <thead>
+                        <tr class="row-header">
+                            <th>Số căn hộ</th>
+                            <th>Chủ sở hữu</th>
+                            <th>Diện tích (m²)</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A-102</td>
+                            <td>Nguyễn Văn An</td>
+                            <td>75</td>
+                            <td><span style="color: green;">Đã thuê</span></td>
+                            <td class = "action-buttons"><button>Sửa</button> <button>Xóa</button></td>  
+                        </tr>
+                    </tbody>
+                </table>
+        </div>
+    </div>
+
+    <script src="js/db.js"></script> 
+    <script src="js/admin.js"></script>
+    <script src="js/resident.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

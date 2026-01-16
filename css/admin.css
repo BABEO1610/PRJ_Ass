@@ -58,6 +58,11 @@
     color: #cbd5e1;
 }
 
+.admin-sidebar li a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;    
+}
 /* Hiệu ứng khi di chuột hoặc Active */
 .admin-sidebar li:hover {
     background-color: var(--sidebar-hover);
