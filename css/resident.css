@@ -1,0 +1,8 @@
+#resident-app { display: flex; flex-direction: column; height: 100vh; }
+.resident-navbar { background: white; padding: 15px 10%; display: flex; justify-content: space-between; border-bottom: 1px solid #ddd; }
+.resident-content { padding: 20px 10%; flex: 1; }
+.resident-hero { background: #fff7ed; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+.request-form { background: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+.request-form textarea { width: 100%; margin: 10px 0; padding: 10px; }
+.btn-submit { background: #f97316; color: white; border: none; padding: 10px 20px; cursor: pointer; }
+.bill-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #eee; display: flex; justify-content: space-between; }
