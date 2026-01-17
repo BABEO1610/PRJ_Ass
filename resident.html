@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Quản Lý Chung Cư</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/resident.css">
 </head>
+
 <body>
 
-    
+
 
     <div id="resident-app">
         <nav class="resident-navbar">
             <div class="brand">MyHome</div>
             <div class="menu">
                 <a href="#" class="active">Trang chủ</a>
+                <a href="#">Thông tin căn hộ</a>
                 <a href="#">Hóa đơn</a>
+                <a href="#" class="support">Hỗ trợ</a>
                 <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
             </div>
+
         </nav>
 
         <main class="resident-content">
             <div class="resident-hero">
                 <h2>Xin chào, Cư dân</h2>
             </div>
-            
+
             <div style="margin-top: 20px;">
                 <h3>📝 Gửi yêu cầu mới</h3>
                 <div class="request-form">
@@ -44,10 +49,11 @@
         </main>
     </div>
 
-    <script src="js/db.js"></script> 
+    <script src="js/db.js"></script>
     <script src="js/admin.js"></script>
     <script src="js/resident.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
 </html>
