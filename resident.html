@@ -19,32 +19,42 @@
         <nav class="resident-navbar">
             <div class="brand">MyHome</div>
             <div class="menu">
-                <a href="#" class="active">Trang chủ</a>
+                <a href="resident.html" class="active">Trang chủ</a>
                 <a href="#">Thông tin căn hộ</a>
                 <a href="#">Hóa đơn</a>
-                <a href="#" class="support">Hỗ trợ</a>
+                <a href="hotro.html" class="support">Hỗ trợ</a>
                 <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
             </div>
+
 
         </nav>
 
         <main class="resident-content">
-            <div class="resident-hero">
-                <h2>Xin chào, Cư dân</h2>
-            </div>
-
-            <div style="margin-top: 20px;">
-                <h3>📝 Gửi yêu cầu mới</h3>
-                <div class="request-form">
-                    <select id="req-type">
-                        <option value="Sửa chữa">🛠️ Sửa chữa</option>
-                        <option value="Gửi xe">🚗 Gửi xe</option>
-                    </select>
-                    <textarea id="req-desc" rows="3" placeholder="Mô tả chi tiết..."></textarea>
-                    <button class="btn-submit" onclick="submitRequest()">Gửi yêu cầu</button>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <p>Số dư tài khoản</p>
+                    <h3>1.000.000 VND</h3>
                 </div>
-                <h3>Lịch sử yêu cầu</h3>
-                <div id="resident-request-list"></div>
+                <div class="card">
+                    <p>Phí cần thanh toán</p>
+                    <h3>5.000.000 VND</h3>
+                </div>
+            </div>
+            <div class="dashboard-grid">
+                <div class="box">
+                    <h4>Tin tức mới nhất</h4>
+                    <div class="box-content"></div>
+                </div>
+
+                <div class="box tall">
+                    <h4>Thông báo từ quản lý</h4>
+                    <div class="box-content"></div>
+                </div>
+
+                <div class="box">
+                    <h4>Ý kiến của bạn</h4>
+                    <div class="box-content"></div>
+                </div>
             </div>
         </main>
     </div>
