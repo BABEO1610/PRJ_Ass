@@ -1,11 +1,15 @@
 function submitRequest() {
     const typeEl = document.getElementById('req-type');
     const descEl = document.getElementById('req-desc');
+    const container = document.getElementById('resident-request-list');
 
-    if (!typeEl || !descEl) return;
+    if (!typeEl || !descEl || !container) {
+        alert("Lỗi form hỗ trợ!");
+        return;
+    }
 
     const type = typeEl.value;
-    const desc = descEl.value;
+    const desc = descEl.value.trim();
 
     if (!desc) {
         alert("Vui lòng nhập mô tả!");
@@ -25,13 +29,12 @@ function submitRequest() {
     saveRequests(list);// Gọi hàm từ db.js
 
     descEl.value = '';
-    renderResidentUI();
+    renderSupportRequests();
     alert("Gửi thành công!");
 }
 
-function renderResidentUI() {
+function renderSupportRequests() {
     const container = document.getElementById('resident-request-list');
-
     if (!container) return;
 
     const list = getRequests();
@@ -44,11 +47,10 @@ function renderResidentUI() {
 
     let html = '';
     myRequests.forEach(req => {
-        const statusClass = `status-${req.status}`;
         html += `
             <div class="bill-item">
                 <div><strong>${req.type}</strong>: ${req.desc}</div>
-                <span class="badge ${statusClass}">${req.status}</span>
+                <span class="badge status-${req.status}">${req.status}</span>
             </div>
         `;
     });
@@ -56,6 +58,4 @@ function renderResidentUI() {
     container.innerHTML = html;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-    renderResidentUI();
-});
+document.addEventListener("DOMContentLoaded", renderSupportRequests);

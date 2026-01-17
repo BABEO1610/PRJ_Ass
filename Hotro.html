@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <title>Hỗ trợ cư dân</title>
@@ -7,42 +8,47 @@
     <link rel="stylesheet" href="css/resident.css">
     <link rel="stylesheet" href="css/hotro.css">
 </head>
+
 <body>
 
-<div id="resident-app">
+    <div id="resident-app">
 
-    <!-- NAVBAR GIỐNG RESIDENT -->
-    <nav class="resident-navbar">
-        <div class="brand">MyHome</div>
-        <div class="menu">
-            <a href="resident.html">Trang chủ</a>
-            <a href="#">Thông tin căn hộ</a>
-            <a href="#">Hóa đơn</a>
-            <a href="hotro.html" class="active support">Hỗ trợ</a>
-            <button class="btn-logout">Đăng xuất</button>
-        </div>
-    </nav>
+        <!-- NAVBAR GIỐNG RESIDENT -->
+        <nav class="resident-navbar">
+            <div class="brand">MyHome</div>
+            <div class="menu">
+                <a href="resident.html">Trang chủ</a>
+                <a href="#">Thông tin căn hộ</a>
+                <a href="#">Hóa đơn</a>
+                <a href="hotro.html" class="active support">Hỗ trợ</a>
+                <button class="btn-logout">Đăng xuất</button>
+            </div>
+        </nav>
 
-    <main class="resident-content">
-        <h2>🆘 Hỗ trợ cư dân</h2>
+        <main class="resident-content">
+            <h2>📝 Gửi yêu cầu mới</h2>
 
-        <div class="request-form">
-            <select>
-                <option>🛠️ Sửa chữa</option>
-                <option>🚗 Gửi xe</option>
-                <option>Khác</option>
-            </select>
+            <div class="request-form">
+                <select id="req-type">
+                    <option value="Sửa chữa">🛠️ Sửa chữa</option>
+                    <option value="Gửi xe">🚗 Gửi xe</option>
+                    <option value="Khác">Khác</option>
+                </select>
 
-            <textarea rows="4" placeholder="Mô tả chi tiết..."></textarea>
+                <textarea id="req-desc" rows="4" placeholder="Mô tả chi tiết..."></textarea>
 
-            <button class="btn-submit">Gửi yêu cầu</button>
-        </div>
+                <button class="btn-submit" onclick="submitRequest()">Gửi yêu cầu</button>
+            </div>
 
-        <h3>Lịch sử yêu cầu</h3>
-        <div id="resident-request-list"></div>
-    </main>
+            <h3>Lịch sử yêu cầu</h3>
+            <div id="resident-request-list"></div>
+        </main>
 
-</div>
+    </div>
+
+    <script src="js/db.js"></script>
+    <script src="js/hotro.js"></script>
 
 </body>
+
 </html>
