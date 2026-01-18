@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin căn hộ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resident.css">
+    <link rel="stylesheet" href="css/ThongTinCanHo.css">
+</head>
+
+<body>
+
+    <div id="resident-app">
+
+        <!-- NAVBAR -->
+        <nav class="resident-navbar">
+            <a href="resident.html" class="brand">MyHome</a>
+            <div class="menu">
+                <a href="resident.html">Trang chủ</a>
+                <a href="ThongTinCanHo.html" class="active">Thông tin căn hộ</a>
+                <a href="dichVu.html">Dịch vụ</a>
+                <a href="hotro.html">Hỗ trợ</a>
+                <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
+            </div>
+        </nav>
+
+        <main class="resident-content">
+            <h2>🏠 Danh sách căn hộ</h2>
+
+            <div class="room-grid">
+
+                <!-- DANH SÁCH Phòng -->
+                <div class="room-card">
+                    <h3>🔑 P101</h3>
+                    <img src="./sample pic/demo1.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>1.800.000 VND</strong></p>
+                    <span class="badge unpaid">Trống</span>
+                    <button class="btn-pay" onclick="payRoom(this)">
+                        Đặt Phòng
+                    </button>
+                </div>
+
+
+                <div class="room-card">
+                    <h3>🔑 P102</h3>
+                    <img src="./sample pic/demo1.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>1.800.000 VND</strong></p>
+                    <span class="badge unpaid">Trống</span>
+                    <button class="btn-pay" onclick="payRoom(this)">
+                        Đặt Phòng
+                    </button>
+                </div>
+
+
+
+                <div class="room-card">
+                    <h3>🔐 P103</h3>
+                    <img src="./sample pic/demo2.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>2.000.000 VND</strong></p>
+                    <span class="badge paid">Đã đặt</span>
+                </div>
+
+                <div class="room-card">
+                    <h3>🔑 P104</h3>
+                    <img src="./sample pic/demo2.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>2.000.000 VND</strong></p>
+                    <span class="badge unpaid">Trống</span>
+                    <button class="btn-pay" onclick="payRoom(this)">
+                        Đặt Phòng
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+    <script src="js/ThongTinCanHo.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
