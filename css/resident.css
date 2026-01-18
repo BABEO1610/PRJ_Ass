@@ -245,3 +245,23 @@
 .box.tall .box-content {
     height: 360px;
 }
+
+.home-service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: #f8fafc;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.home-service-item strong {
+    color: var(--text-dark);
+}
+
+.home-service-item .badge {
+    font-size: 11px;
+    padding: 4px 10px;
+}
