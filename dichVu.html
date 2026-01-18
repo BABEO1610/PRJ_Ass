@@ -69,7 +69,11 @@
                     <p class="price">💰 Số tiền: <strong>120.000 VND</strong></p>
 
                     <span class="badge status-active">Đang sử dụng</span>
-                    <span class="badge pay-paid">Đã thanh toán</span>
+                    <span class="badge pay-unpaid">Chưa thanh toán</span>
+
+                    <button class="btn-pay" onclick="payService('baotri', this)">
+                        Thanh toán
+                    </button>
                 </div>
 
                 <div class="service-card" data-service="baotri">
