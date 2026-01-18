@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thông tin căn hộ</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/resident.css">
-    <link rel="stylesheet" href="css/dichVu.css">
+    <link rel="stylesheet" href="css/ThongTinCanHo.css">
 </head>
 
 <body>
@@ -26,63 +27,68 @@
         </nav>
 
         <main class="resident-content">
-            <h2>📦 Danh sách căn hộ</h2>
+            <h2>🏠 Danh sách căn hộ</h2>
 
-            <div class="service-grid">
+            <div class="room-grid">
 
-                <!-- DỊCH VỤ -->
-                <div class="service-card" data-service="nuoc">
-                    <h3>💧 Nước sinh hoạt</h3>
-                    <p>Kỳ: Tháng 01/2026</p>
-
-                    <p class="price">💰 Số tiền: <strong>180.000 VND</strong></p>
-
-                    <span class="badge status-active">Đang sử dụng</span>
-                    <span class="badge pay-unpaid">Chưa thanh toán</span>
-
-                    <button class="btn-pay" onclick="payService('nuoc', this)">
-                        Thanh toán
+                <!-- DANH SÁCH Phòng -->
+                <div class="room-card">
+                    <h3>🔑 P101</h3>
+                    <img src="./sample pic/demo1.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>1.800.000 VND</strong></p>
+                    <span class="badge unpaid">Trống</span>
+                    <button class="btn-pay" onclick="payRoom(this)">
+                        Đặt Phòng
                     </button>
                 </div>
 
 
-                <div class="service-card" data-service="dien">
-                    <h3>⚡ Điện sinh hoạt</h3>
-                    <p>Kỳ: Tháng 01/2026</p>
-
-                    <p class="price">💰 Số tiền: <strong>350.000 VND</strong></p>
-
-                    <span class="badge status-active">Đang sử dụng</span>
-                    <span class="badge pay-unpaid">Chưa thanh toán</span>
-
-                    <button class="btn-pay" onclick="payService('dien', this)">
-                        Thanh toán
+                <div class="room-card">
+                    <h3>🔑 P102</h3>
+                    <img src="./sample pic/demo1.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>1.800.000 VND</strong></p>
+                    <span class="badge unpaid">Trống</span>
+                    <button class="btn-pay" onclick="payRoom(this)">
+                        Đặt Phòng
                     </button>
                 </div>
 
 
 
-                <div class="service-card" data-service="guixe">
-                    <h3>🚗 Gửi xe</h3>
-                    <p>Kỳ: Tháng 01/2026</p>
-
-                    <p class="price">💰 Số tiền: <strong>120.000 VND</strong></p>
-
-                    <span class="badge status-active">Đang sử dụng</span>
-                    <span class="badge pay-paid">Đã thanh toán</span>
+                <div class="room-card">
+                    <h3>🔐 P103</h3>
+                    <img src="./sample pic/demo2.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>2.000.000 VND</strong></p>
+                    <span class="badge paid">Đã đặt</span>
                 </div>
 
-                <div class="service-card" data-service="baotri">
-                    <h3>🛠️ Bảo trì định kỳ</h3>
-                    <p>Kỳ: Năm 2026</p>
-
-                    <p class="price">💰 Số tiền: <strong>500.000 VND</strong></p>
-
-                    <!-- <span class="badge status-inactive">Không sử dụng</span> -->
-                    <span class="badge pay-unpaid">Chưa thanh toán</span>
-
-                    <button class="btn-pay" onclick="payService('baotri', this)">
-                        Thanh toán
+                <div class="room-card">
+                    <h3>🔑 P104</h3>
+                    <img src="./sample pic/demo2.jpg" alt="demo1">
+                    <p class="desc"><strong>Mô tả: </strong> Lorem Ipsum is simply dummy
+                         text of the printing and typesetting industry. Lorem Ipsum has 
+                         been the industry's standard dummy text ever since the 1500s,
+                          when an unknown printer took a galley of type and scrambled it 
+                          to make a type specimen book.</p>
+                    <p class="price">💰 Số tiền: <strong>2.000.000 VND</strong></p>
+                    <span class="badge unpaid">Trống</span>
+                    <button class="btn-pay" onclick="payRoom(this)">
+                        Đặt Phòng
                     </button>
                 </div>
 
@@ -90,9 +96,9 @@
         </main>
 
     </div>
-
-    <script src="js/dichVu.js"></script>
+    <script src="js/ThongTinCanHo.js"></script>
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

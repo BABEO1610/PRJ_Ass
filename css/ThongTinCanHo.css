@@ -1,0 +1,86 @@
+.room-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+.room-card {
+    background: white;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.room-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.room-card h3 {
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.room-card p {
+    font-size: 14px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+}
+
+.desc {
+    padding: 10px 0;
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+/* Trạng thái phòng */
+.unpaid {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #bbf7d0;
+}
+
+.paid {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+}
+
+.price {
+    margin: 8px 0 12px;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
+/* Nút đặt */
+.btn-pay {
+    margin-top: 10px;
+    background: linear-gradient(to right, #38bdf8, #60a5fa);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.1s, box-shadow 0.2s;
+}
+
+.btn-pay:hover {
+    box-shadow: 0 6px 14px rgba(56,189,248,0.4);
+}
+
+.btn-pay:active {
+    transform: scale(0.97);
+}
+
