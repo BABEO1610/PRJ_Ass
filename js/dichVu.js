@@ -1,4 +1,3 @@
-// ===== LOAD TRẠNG THÁI KHI MỞ TRANG =====
 document.addEventListener("DOMContentLoaded", () => {
     checkNewBillingPeriod();
     loadPaymentStatus();
@@ -16,7 +15,6 @@ function loadPaymentStatus() {
     });
 }
 
-// ===== THANH TOÁN =====
 function payService(serviceKey, btn) {
     const ok = confirm("Xác nhận thanh toán dịch vụ này?");
     if (!ok) return;
@@ -33,7 +31,6 @@ function payService(serviceKey, btn) {
     alert("Thanh toán thành công!");
 }
 
-// ===== UPDATE UI =====
 function markAsPaid(card) {
     const unpaid = card.querySelector(".pay-unpaid");
     if (unpaid) {
