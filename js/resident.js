@@ -57,5 +57,38 @@ function renderResidentUI() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    renderResidentUI();
+    renderResidentUI();      
+    renderHomeServices();    
 });
+
+
+function renderHomeServices() {
+    const container = document.getElementById("home-service-list");
+    if (!container) return;
+
+    const services = [
+        { key: "nuoc", name: "💧 Nước sinh hoạt" },
+        { key: "dien", name: "⚡ Điện sinh hoạt" },
+        { key: "guixe", name: "🚗 Gửi xe" },
+        { key: "baotri", name: "🛠️ Bảo trì định kỳ" }
+    ];
+
+    const paidServices = JSON.parse(localStorage.getItem("paidServices")) || {};
+
+    let html = "";
+
+    services.forEach(s => {
+        const paid = paidServices[s.key];
+        html += `
+            <div class="home-service-item">
+                <strong>${s.name}</strong>
+                <span class="badge ${paid ? "pay-paid" : "pay-unpaid"}">
+                    ${paid ? "Đã thanh toán" : "Chưa thanh toán"}
+                </span>
+            </div>
+        `;
+    });
+
+    container.innerHTML = html;
+}
+
