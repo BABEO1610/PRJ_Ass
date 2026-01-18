@@ -1,1 +1,99 @@
-<h1>Hello</h1>
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dịch vụ cư dân</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/resident.css">
+    <link rel="stylesheet" href="css/dichVu.css">
+</head>
+
+<body>
+
+    <div id="resident-app">
+
+        <!-- NAVBAR -->
+        <nav class="resident-navbar">
+            <div class="brand">MyHome</div>
+            <div class="menu">
+                <a href="resident.html">Trang chủ</a>
+                <a href="#">Thông tin căn hộ</a>
+                <a href="dichVu.html" class="active">Dịch vụ</a>
+                <a href="hotro.html">Hỗ trợ</a>
+                <button class="btn-logout">Đăng xuất</button>
+            </div>
+        </nav>
+
+        <main class="resident-content">
+            <h2>📦 Dịch vụ đang sử dụng</h2>
+
+            <div class="service-grid">
+
+                <!-- DỊCH VỤ -->
+                <div class="service-card" data-service="nuoc">
+                    <h3>💧 Nước sinh hoạt</h3>
+                    <p>Kỳ: Tháng 01/2026</p>
+
+                    <p class="price">💰 Số tiền: <strong>180.000 VND</strong></p>
+
+                    <span class="badge status-active">Đang sử dụng</span>
+                    <span class="badge pay-unpaid">Chưa thanh toán</span>
+
+                    <button class="btn-pay" onclick="payService('nuoc', this)">
+                        Thanh toán
+                    </button>
+                </div>
+
+
+                <div class="service-card" data-service="dien">
+                    <h3>⚡ Điện sinh hoạt</h3>
+                    <p>Kỳ: Tháng 01/2026</p>
+
+                    <p class="price">💰 Số tiền: <strong>350.000 VND</strong></p>
+
+                    <span class="badge status-active">Đang sử dụng</span>
+                    <span class="badge pay-unpaid">Chưa thanh toán</span>
+
+                    <button class="btn-pay" onclick="payService('dien', this)">
+                        Thanh toán
+                    </button>
+                </div>
+
+
+
+                <div class="service-card" data-service="guixe">
+                    <h3>🚗 Gửi xe</h3>
+                    <p>Kỳ: Tháng 01/2026</p>
+
+                    <p class="price">💰 Số tiền: <strong>120.000 VND</strong></p>
+
+                    <span class="badge status-active">Đang sử dụng</span>
+                    <span class="badge pay-paid">Đã thanh toán</span>
+                </div>
+
+                <div class="service-card" data-service="baotri">
+                    <h3>🛠️ Bảo trì định kỳ</h3>
+                    <p>Kỳ: Năm 2026</p>
+
+                    <p class="price">💰 Số tiền: <strong>500.000 VND</strong></p>
+
+                    <!-- <span class="badge status-inactive">Không sử dụng</span> -->
+                    <span class="badge pay-unpaid">Chưa thanh toán</span>
+
+                    <button class="btn-pay" onclick="payService('baotri', this)">
+                        Thanh toán
+                    </button>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="js/dichVu.js"></script>
+
+
+</body>
+
+</html>

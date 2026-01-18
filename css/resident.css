@@ -1,13 +1,13 @@
-/* --- BIẾN MÀU SẮC (Tông màu Cam ấm áp) --- */
+/* --- BIẾN MÀU SẮC (Tông màu Cyan xanh) --- */
 :root {
-    --primary-color: #f97316;    /* Cam chủ đạo */
-    --primary-hover: #ea580c;    /* Cam đậm khi hover */
-    --bg-soft: #fff7ed;          /* Nền kem nhạt */
-    --text-dark: #1e293b;        /* Chữ đen xám */
-    --text-light: #64748b;       /* Chữ xám nhạt */
+    --primary-color: #38bdf8;      /* Cyan xanh */
+    --primary-hover: #0ea5e9;
+    --bg-soft: #f0f9ff;            /* Nền xanh rất nhạt */
+    --text-dark: #0f172a;          /* Navy đậm */
+    --text-light: #475569;         /* Xám xanh */
     --white: #ffffff;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 /* --- BỐ CỤC CHUNG --- */
@@ -68,10 +68,10 @@
 
 /* --- HERO SECTION (Phần chào mừng) --- */
 .resident-hero {
-    background: linear-gradient(135deg, #ffedd5 0%, #fff7ed 100%); /* Gradient cam nhẹ */
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%); /* Gradient cam nhẹ */
     padding: 40px 10%;
     margin-bottom: 30px;
-    border-bottom: 1px solid #fed7aa;
+    border-bottom: 1px solid #bae6fd;
 }
 
 .resident-hero h2 {
@@ -125,7 +125,7 @@
 }
 
 .btn-submit {
-    background: linear-gradient(to right, #f97316, #fb923c); /* Nút gradient */
+    background: linear-gradient(to right, #38bdf8, #60a5fa); /* Nút gradient */
     color: white;
     border: none;
     padding: 14px 30px;
@@ -134,11 +134,15 @@
     font-size: 16px;
     font-weight: 700;
     width: 100%; /* Nút full chiều ngang trên mobile */
-    transition: transform 0.1s;
+    transition: transform 0.1s, box-shadow 0.2s;
 }
 
 .btn-submit:active {
     transform: scale(0.98); /* Hiệu ứng ấn xuống */
+}
+
+.btn-submit:hover {
+    box-shadow: 0 6px 16px rgba(56, 189, 248, 0.4);
 }
 
 /* --- DANH SÁCH LỊCH SỬ (List Style) --- */

@@ -59,3 +59,13 @@ function renderSupportRequests() {
 }
 
 document.addEventListener("DOMContentLoaded", renderSupportRequests);
+
+document.getElementById("req-type").addEventListener("change", function () {
+    const moveForm = document.getElementById("move-form");
+    if (this.value === "Chuyển đồ") {
+        moveForm.classList.remove("hidden");
+    } else {
+        moveForm.classList.add("hidden");
+    }
+});
+

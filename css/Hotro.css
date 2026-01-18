@@ -1,3 +1,17 @@
 h2 {
     margin-bottom: 20px;
 }
+
+.move-form {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.note {
+    font-size: 13px;
+    color: #475569;
+    margin-top: 10px;
+}

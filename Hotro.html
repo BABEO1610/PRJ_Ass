@@ -19,7 +19,7 @@
             <div class="menu">
                 <a href="resident.html">Trang chủ</a>
                 <a href="#">Thông tin căn hộ</a>
-                <a href="#">Hóa đơn</a>
+                <a href="dichVu.html">Dịch vụ</a>
                 <a href="hotro.html" class="active support">Hỗ trợ</a>
                 <button class="btn-logout">Đăng xuất</button>
             </div>
@@ -32,8 +32,36 @@
                 <select id="req-type">
                     <option value="Sửa chữa">🛠️ Sửa chữa</option>
                     <option value="Gửi xe">🚗 Gửi xe</option>
-                    <option value="Khác">Khác</option>
+                    <option value="Chuyển đồ">📦 Chuyển đồ ra / vào</option>
                 </select>
+                <!-- FORM RIÊNG CHO CHUYỂN ĐỒ -->
+                <div id="move-form" class="move-form hidden">
+
+                    <label>Loại chuyển</label>
+                    <select id="move-type">
+                        <option value="Vào">Chuyển đồ vào</option>
+                        <option value="Ra">Chuyển đồ ra</option>
+                    </select>
+
+                    <label>Ngày chuyển</label>
+                    <input type="date" id="move-date">
+
+                    <label>Khung giờ</label>
+                    <select id="move-time">
+                        <option value="">-- Chọn khung giờ --</option>
+                        <option>08:00 - 10:00</option>
+                        <option>10:00 - 12:00</option>
+                        <option>14:00 - 16:00</option>
+                        <option>16:00 - 18:00</option>
+                    </select>
+
+                    <label>Mô tả đồ đạc</label>
+                    <textarea id="move-desc"></textarea>
+
+                    <p class="note">
+                        ⚠ Việc chuyển đồ phải đăng ký trước và được Ban quản lý phê duyệt.
+                    </p>
+                </div>
 
                 <textarea id="req-desc" rows="4" placeholder="Mô tả chi tiết..."></textarea>
 
