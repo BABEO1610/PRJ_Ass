@@ -97,20 +97,50 @@
 }
 
 .btn-logout {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
     background-color: white;
+    width:  45px;
+    height: 45px;
     border: 1px solid var(--border-color);
+    border-radius: 50%;
     padding: 8px 16px;
-    border-radius: 6px;
     color: #ef4444; /* Màu đỏ */
     font-weight: 600;
-    transition: 0.2s;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    cursor: pointer;
+    overflow: hidden;
 }
-.btn-logout:hover {
-    background-color: #fee2e2;
-    transform: translateY(-2px);
+.btn-logout .logout-icon {
+    width: 100%;
 }
 
+.btn-logout .logout-txt {
+    position: absolute;
+    right: 0%;
+    opacity: 0;
+    font-size: 13px;
+    /* transition-duration: 0.3s; */
+}
+.btn-logout:hover {
+    width: 120px;
+    border-radius: 25px;
+    padding-left: 20px;
+    transition-duration: 0.3s;
+}
+.btn-logout:hover .logout-icon {
+    width: 20%;
+}
+
+.btn-logout:hover .logout-txt {
+    padding-right: 10px;
+    opacity: 1;
+    width: 70%;
+    /* margin-right: 15px; */
+    transition-duration: 0.3s;
+}
 /* --- DASHBOARD CARDS (Các thẻ thống kê) --- */
 /* Dùng Grid để tự động chia cột đều nhau */
 .card-grid {

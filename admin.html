@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>App Quản Lý Chung Cư</title>
-    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/resident.css">
@@ -37,10 +38,15 @@
                 <li><a href="quanLyCanHo.html">Quản lý Căn hộ</a></li>
                 <li><a href="yeuCauCuDan.html">Yêu cầu cư dân</a></li>
                 <li><a href="quanLyNhanVien.html">Quản lý nhân viên</a></li>
-                <li><a href="dichVu.html">Dịch vụ</a></li>
+                <li><a href="adminDichVu.html">Dịch vụ</a></li>
             </ul>
         </nav>
-         <button class="btn-logout" onclick="handleLogout()">Đăng xuất</button>
+        <div>
+            <button class="btn-logout" onclick="handleLogout()">
+                <i class="fa-solid fa-right-from-bracket logout-icon"></i>
+                <span class="logout-txt">Đăng xuất</span>
+            </button>
+        </div>
     </div>
 
     <!-- <div id="resident-app" class="hidden">
